@@ -17,3 +17,71 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+//grab div to manipulate for carousel
+const carouselContainer = document.querySelector('.carousel-container');
+
+const carouselCreator = (images) => {
+
+  //create variables
+  const carouselDiv = document.createElement('div');
+  const changingImage = document.createElement('img');
+  // const mountains = document.createElement('img');
+  // const computer = document.createElement('img');
+  // const trees = document.createElement('img');
+  // const turntable = document.createElement('img');
+  const backButton = document.createElement('div');
+  const forwardButton = document.createElement('div');
+  
+  //button event listener variables
+  let count = 0;
+  const images = ['.assets/carousel/mountains.jpeg', '.assets/carousel/computer.jpeg', '.assets/carousel/trees.jpeg', '.assets/carousel/turntable.src'];
+
+  //assign classes
+  carouselDiv.classList.add('carousel');
+  
+  // mountains.classList.add('mountains');
+  // computer.classList.add('computer');
+  // trees.classList.add('trees');
+  // turntable.classList.add('turntable');
+  backButton.classList.add('back-button');
+  forwardButton.classList.add('forward-button');
+
+  // //img src
+  // mountains.src = '.assets/carousel/mountains.jpeg';
+  // computer.src = '.assets/carousel/computer.jpeg';
+  // trees.src = '.assets/carousel/trees.jpeg';
+  // turntable.src = '.assets/carousel/turntable.src';
+
+  //button content
+  backButton.textContent = '<';
+  forwardButton.textContent = '>';
+
+  //back button event
+  backButton.addEventListener('click', (event) => {
+  
+    if(count == 4){
+      changingImage.src =  images[0];
+      current = 0;
+    } else{
+      changingImage.src = images[count];
+      count += 1;
+    }
+  })
+
+  forwardButton.addEventListener('click', (event) => {
+    if(count == 0){
+      images.src = images[3];
+      count = 3;
+    }else {
+      images.src = images[count];
+      count -= 1;
+    }
+  })
+
+  carouselDiv.appendChild(backButton);
+  carouselDiv.appendChild(changingImage);
+  carouselDiv.appendChild(forwardButton);
+}
+
+carouselContainer.appendChild(carouselCreator(images));
