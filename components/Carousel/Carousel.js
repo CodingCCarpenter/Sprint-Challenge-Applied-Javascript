@@ -24,7 +24,7 @@ const carouselContainer = document.querySelector('.carousel-container');
 const carouselCreator = (images) => {
 
   //create variables
-  const carouselDiv = document.createElement('div');
+  const carousel = document.createElement('div');
   const changingImage = document.createElement('img');
   // const mountains = document.createElement('img');
   // const computer = document.createElement('img');
@@ -38,14 +38,13 @@ const carouselCreator = (images) => {
   const images = ['.assets/carousel/mountains.jpeg', '.assets/carousel/computer.jpeg', '.assets/carousel/trees.jpeg', '.assets/carousel/turntable.src'];
 
   //assign classes
-  carouselDiv.classList.add('carousel');
-  
+  carousel.classList.add('carousel');
   // mountains.classList.add('mountains');
   // computer.classList.add('computer');
   // trees.classList.add('trees');
   // turntable.classList.add('turntable');
-  backButton.classList.add('back-button');
-  forwardButton.classList.add('forward-button');
+  backButton.classList.add('left-button');
+  forwardButton.classList.add('right-button');
 
   // //img src
   // mountains.src = '.assets/carousel/mountains.jpeg';
@@ -79,9 +78,9 @@ const carouselCreator = (images) => {
     }
   })
 
-  carouselDiv.appendChild(backButton);
-  carouselDiv.appendChild(changingImage);
-  carouselDiv.appendChild(forwardButton);
+  carousel.appendChild(backButton);
+  carousel.appendChild(changingImage);
+  carousel.appendChild(forwardButton);
 }
 
 carouselContainer.appendChild(carouselCreator(images));
