@@ -9,10 +9,9 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function createHeader(items) {
+function Header() {
 
     //variables
-    const headerContainer = document.querySelector('.header-container');
     const div = document.createElement('div');
     const span = document.createElement('span');
     const h1 = document.createElement('h1');
@@ -29,12 +28,12 @@ function createHeader(items) {
     span2.textContent = "98°";
 
     //component structure;
-    headerContainer.appendChild(div);
     div.appendChild(span);
     div.appendChild(h1);
     div.appendChild(span2);
 
-    return headerContainer;
-    
+    return div;  
 }
+const headerContainer = document.querySelector('.header-container');
+headerContainer.appendChild(Header());
 
