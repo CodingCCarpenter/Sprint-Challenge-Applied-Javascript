@@ -29,14 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+    DOM stands for Document Object Model. It is basically a object-style map of the entire document. Because it is a model, altering the DOM will not alter the original code.
 
 2. What is an event?
+    An event is an interaction between the DOM and the HTML when the use manipulates a page.
 
 3. What is an event listener?
+    An event listener watches for a specific event, and executes a piece of code if that event occurs.
 
 4. Why would we convert a NodeList into an Array?
+    to be able to iterate through the data
 
 5. What is a component?
+    a function that may or may not accept arguments, and that gives instructions to the browser to manipulate the DOM.
+
 
 ### Git Set up
 
@@ -68,3 +74,4 @@ Your stretch challenge is to write the functionality of a `Carousel` component. 
 * [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
 * [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
+
